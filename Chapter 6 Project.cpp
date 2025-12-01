@@ -8,18 +8,36 @@ void calcRoomNumber(int& x) {  //This function recieves and validates the user-e
     do {
         cout << "Enter the number of Room(s): ";
         cin >> x;
+        if (x < 1) {
+            cout << "\nInvalid number of Room(s) \n";
+        }
+        else {
+
+        }
     } while (x < 1);
 }
 void calcRoomSize(double& x) {  //This function recieves and validates the user-entered values for the wall size of a room, then stores them for future use
     do {
         cout << "Enter the square footage of a Room(use common sense): ";
         cin >> x;
+        if (x < 1) {
+            cout << "\nInvalid square footage \n";
+        }
+        else {
+
+        }
     } while (x < 1);
 }
 void calcPaintCost(double& x) {  //This function recieves and validates the user-entered values for the cost of paint, then stores them for future use
     do {
         cout << "Enter the cost of paint per gallon in USD(above $9.99): ";
         cin >> x;
+        if (x < 10) {
+            cout << "\nInvalid cost of paint \n";
+        }
+        else {
+
+        }
     } while (x < 10);
 }
 
