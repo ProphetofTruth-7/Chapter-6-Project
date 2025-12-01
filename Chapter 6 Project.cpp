@@ -14,13 +14,13 @@ void calcRoomSize(double& x) {  //This function recieves and validates the user-
     do {
         cout << "Enter the square footage of a Room(use common sense): ";
         cin >> x;
-    } while (x < 0);
+    } while (x < 1);
 }
 void calcPaintCost(double& x) {  //This function recieves and validates the user-entered values for the cost of paint, then stores them for future use
     do {
         cout << "Enter the cost of paint per gallon in USD(above $9.99): ";
         cin >> x;
-    } while (x < 0);
+    } while (x < 10);
 }
 
 
