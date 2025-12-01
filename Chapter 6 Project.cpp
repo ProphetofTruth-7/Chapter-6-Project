@@ -13,14 +13,37 @@ void getRectParameters(double &x, double &y) {  //This function recieves and val
         cin >> y;
     } while (y < 0.01);
 }
+void calcRectPerimeter(double x, double y) { //This function calculates the Perimeter(without changing rectLength or rectWidth) and displays the value
+    cout << "The Perimeter of this Rectangle is: " << 2 * (x + y) << " Units";
+}
+void calcRectArea(double x, double y) { //This function calculates the Area(without changing rectLength or rectWidth) and displays the value
+    cout << "The Area of this Rectangle is: " << x * y << " Units";
+}
 
-int main()
+
+int main()   //This is the main function, which establishes the variables and ticks through each function as many times as requested
 {
-    double rectLength = 0;
-    double rectWidth = 0;
+    int programInitialization = 0;
+    double rectLength = 0, rectWidth = 0;
 
-    getRectParameters(rectLength, rectWidth);
+    do {
+        cout << "\nInitialize Program?(0 = No, 1 = Yes): ";
+        cin >> programInitialization;
+        if (programInitialization == 1) {
 
-    cout << rectLength;
-    cout << rectWidth;
+            getRectParameters(rectLength, rectWidth);
+
+            cout << endl;
+
+            calcRectPerimeter(rectLength, rectWidth);
+
+            cout << endl;
+
+            calcRectArea(rectLength, rectWidth);
+
+            cout << endl;
+        }
+    } while (programInitialization != 0);
+    cout << "Program Terminated";
+    return 0;
 }
