@@ -1,9 +1,10 @@
-// This is the Main Branch! Select the sub-branches to grade this project
+// This is the Paint Job Estimator Sub-branch
 
 #include <iostream>
 using namespace std;
 
 int main()
 {
-    cout << "Hello Worlbederdd!\n";
+    int paintGallons, laborCost, wallSquareFootage, totalCost, numberofRooms;
+
 }
