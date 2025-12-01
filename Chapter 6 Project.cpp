@@ -15,6 +15,67 @@ void validateJudgeScore(double& x) {  //This function recieves and validates the
         }
     } while (x < 0.01 || x > 10);
 }
+double calcLeastScore(double& a, double& b, double& c, double& d, double& f) {    //This function receives all the judge's scores and returns the least of them
+    double leastScore = a;
+
+    if (leastScore > f) {
+        if (leastScore > d) {
+            if (leastScore > c) {
+                if (leastScore > b) {
+                    if (leastScore >= a) {
+                        leastScore = a;
+                    }
+                    else {
+                        cout << "Invalid";
+                    }
+                }
+                else {
+                    leastScore = b;
+                }
+            }
+            else {
+                leastScore = c;
+            }
+        }
+        else {
+            leastScore = d;
+        }
+    }
+    else {
+        leastScore = f;
+    }
+
+    return leastScore;
+}
+
+double calcGreatestScore(double& a, double& b, double& c, double& d, double& f) {
+    int greatestScore = a;
+
+    if (greatestScore > f) {     // This nest assigns the greatestScore for future use
+        if (greatestScore >= d) {
+            if (greatestScore >= c) {
+                if (greatestScore >= b) {
+                    if (greatestScore >= a) {
+                        greatestScore = a;
+                    }
+                }
+                else {
+                    greatestScore = b;
+                }
+            }
+            else {
+                greatestScore = c;
+            }
+        }
+        else {
+            greatestScore = d;
+        }
+    }
+    else {
+        greatestScore = f;
+    }
+    return greatestScore;
+}
 
 int main()
 {
@@ -45,53 +106,8 @@ int main()
     double leastScore = judge1Score;
     double greatestScore = judge1Score;
 
-    if (leastScore <= judge5Score) {       // This nest assigns the leastScore for future use
-        if (leastScore <= judge4Score) {
-            if (leastScore <= judge3Score) {
-                if (leastScore <= judge2Score) {
-                    if (leastScore <= judge1Score) {
-                        leastScore = judge1Score;
-                    }
-                }
-                else {
-                    leastScore = judge2Score;
-                }
-            }
-            else {
-                leastScore = judge3Score;
-            }
-        }
-        else {
-            leastScore = judge4Score;
-        }
-    }
-    else {
-        leastScore = judge5Score;
-    }
-
-    if (greatestScore >= judge5Score) {     // This nest assigns the greatestScore for future use
-        if (greatestScore >= judge4Score) {
-            if (greatestScore >= judge3Score) {
-                if (greatestScore >= judge2Score) {
-                    if (greatestScore >= judge1Score) {
-                        greatestScore = judge1Score;
-                    }
-                }
-                else {
-                    greatestScore = judge2Score;
-                }
-            }
-            else {
-                greatestScore = judge3Score;
-            }
-        }
-        else {
-            greatestScore = judge4Score;
-        }
-    }
-    else {
-        greatestScore = judge5Score;
-    }
+    calcLeastScore(judge1Score, judge2Score, judge3Score, judge4Score, judge5Score);
+    calcGreatestScore(judge1Score, judge2Score, judge3Score, judge4Score, judge5Score);
 
     averageScore = ((judge1Score + judge2Score + judge3Score + judge4Score + judge5Score) - (leastScore + greatestScore)) / 3;
 
