@@ -7,10 +7,22 @@ void getRectParameters(double &x, double &y) {  //This function recieves and val
     do {
         cout << "Enter the Rectangle's Length(must be greater than 0): ";
         cin >> x;
+        if (x < 0.01) {
+            cout << "\nInvalid length \n";
+        }
+        else {
+
+        }
     } while (x < 0.01);
     do {
         cout << "Enter the Rectangle's Width(must be greater than 0): ";
         cin >> y;
+        if (y < 0.01) {
+            cout << "\nInvalid length \n";
+        }
+        else {
+
+        }
     } while (y < 0.01);
 }
 void calcRectPerimeter(double x, double y) { //This function calculates the Perimeter(without changing rectLength or rectWidth) and displays the value
