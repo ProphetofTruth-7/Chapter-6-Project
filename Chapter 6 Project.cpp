@@ -18,7 +18,7 @@ void getRectParameters(double &x, double &y) {  //This function recieves and val
         cout << "Enter the Rectangle's Width(must be greater than 0): ";
         cin >> y;
         if (y < 0.01) {
-            cout << "\nInvalid length \n";
+            cout << "\nInvalid width \n";
         }
         else {
 
