@@ -4,7 +4,7 @@
 #include <iomanip>
 using namespace std;
 
-double calcCelsius(double x) {   //This function calculates the Celsius formula and returns the value for use in the table
+double calcCelsius(double x) {   //This function calculates the Celsius formula and returns the value for use in the table. It only requires a fahrenheit value
     return 0.5555 * (x-32);
 }
 
@@ -12,13 +12,19 @@ double calcCelsius(double x) {   //This function calculates the Celsius formula 
 int main()
 {
     const int MINTEMP = 0, MAXTEMP = 20;  // This sets your range for the minimum and maximum Fahrenheit. Change these to make a larger range
-    int fahrenheitValue;
+    int loopIncrement = 1;
+
+    cout << endl;
+
+    cout << "            Conversion Table" << endl;
+    cout << "Fahrenheit" << setw(26) << "Celsius" << endl;
+
+    int fahrenheitValue = MINTEMP;
 
     do {
-        cout << "Enter the Fahrenheit(must be an integer between " << MINTEMP << " and " << MAXTEMP << "): ";
-        cin >> fahrenheitValue;
-        cout << "The Celsius value of that temperature is: " << calcCelsius(fahrenheitValue);
-    } while (fahrenheitValue > MAXTEMP || fahrenheitValue < MINTEMP);
+        cout << fahrenheitValue << setw(35) << calcCelsius(fahrenheitValue) << endl;
+        ++fahrenheitValue;
+    } while (fahrenheitValue != MAXTEMP +1);
 
-
+    return 0;
 }
