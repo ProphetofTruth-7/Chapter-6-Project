@@ -24,7 +24,7 @@ void revealLeast(int a, int b, int c, int d, int e, int z) {  //This function at
         cout << "The city sector with the least accidents is the East, with " << c << " accidents";
     } else if (d == z) {
         cout << "The city sector with the least accidents is the West, with " << d << " accidents";
-    } else if (e == z) {
+    } else {
         cout << "The city sector with the least accidents is the Central, with " << e << " accidents";
     }
 
