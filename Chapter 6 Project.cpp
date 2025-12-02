@@ -40,7 +40,7 @@ double calcLeastScore(double& a, double& b, double& c, double& d, double& f) {  
         cout << "The least score is F: " << leastScore << endl;
     }
 
-    return leastScore; //It goes through the entire lot, correctly assigning leastScore along the way, but somehow always returns 'a' at the end. No matter where the if statement for a actually is
+    return leastScore; //It goes through the entire lot, correctly assigning leastScore along the way, but somehow always returns 'a' at the end. No matter where the if statement for 'a' actually is
 }
 
 double calcGreatestScore(double& a, double& b, double& c, double& d, double& f) {
