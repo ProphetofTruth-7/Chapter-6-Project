@@ -15,33 +15,24 @@ void validateJudgeScore(double& x) {  //This function recieves and validates the
         }
     } while (x < 0.01 || x > 10);
 }
-double calcLeastScore(double& a, double& b, double& c, double& d, double& f) {    //This function receives all the judge's scores and returns the least of them
-    double leastScore = a;
+double calcLeastScore(double& a, double& b, double& c, double& d, double& f) {    // I don't understand. Why isn't it changing?
+    double leastScore = 99;
+    int loopIncrement = 1;
 
-    if (leastScore > f) {
-        if (leastScore > d) {
-            if (leastScore > c) {
-                if (leastScore > b) {
-                    if (leastScore >= a) {
-                        leastScore = a;
-                    }
-                    else {
-                        cout << "Invalid";
-                    }
-                }
-                else {
-                    leastScore = b;
-                }
-            }
-            else {
-                leastScore = c;
-            }
-        }
-        else {
-            leastScore = d;
-        }
+    if (leastScore > a) {
+        leastScore = a;
     }
-    else {
+    if (leastScore > b) {
+        leastScore = b;
+        cout << "True";
+    }
+    if (leastScore > c) {
+        leastScore = c;
+    }
+    if (leastScore > d) {
+        leastScore = d;
+    }
+    if (leastScore > f) {
         leastScore = f;
     }
 
@@ -115,5 +106,8 @@ int main()
     cout << greatestScore << endl;
     cout << averageScore << endl;
     
+
+
+
     return 0;
 }
