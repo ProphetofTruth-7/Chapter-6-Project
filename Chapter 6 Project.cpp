@@ -1,4 +1,4 @@
-// This is the Main Branch! Select the sub-branches to grade this project
+// This is the Judge scoring Branch!
 
 #include <iostream>
 using namespace std;
