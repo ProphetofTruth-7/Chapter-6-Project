@@ -21,28 +21,32 @@ double calcLeastScore(double& a, double& b, double& c, double& d, double& f) {  
 
     if (leastScore > a) {
         leastScore = a;
+        cout << "The least score is A: " << leastScore << endl;
     }
     if (leastScore > b) {
         leastScore = b;
-        cout << "True";
+        cout << "The least score is B: " << leastScore << endl;
     }
     if (leastScore > c) {
         leastScore = c;
+        cout << "The least score is C: " << leastScore << endl;
     }
     if (leastScore > d) {
         leastScore = d;
+        cout << "The least score is D: " << leastScore << endl;
     }
     if (leastScore > f) {
         leastScore = f;
+        cout << "The least score is F: " << leastScore << endl;
     }
 
-    return leastScore;
+    return leastScore; //It goes through the entire lot, correctly assigning leastScore along the way, but somehow always returns 'a' at the end. No matter where the if statement for a actually is
 }
 
 double calcGreatestScore(double& a, double& b, double& c, double& d, double& f) {
     int greatestScore = a;
 
-    if (greatestScore > f) {     // This nest assigns the greatestScore for future use
+    if (greatestScore > f) {     // This nest is a complete useless mess. Ignore
         if (greatestScore >= d) {
             if (greatestScore >= c) {
                 if (greatestScore >= b) {
@@ -105,6 +109,9 @@ int main()
     cout << leastScore << endl;
     cout << greatestScore << endl;
     cout << averageScore << endl;
+
+    cout << "\n \n \n TESTING";
+    cout << judge1Score << judge2Score << judge3Score << judge4Score << judge5Score << endl;   //It properly stores the Judge values
     
 
 
